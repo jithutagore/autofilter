@@ -107,6 +107,7 @@ def get_reply_markup(query):
         ],[
             InlineKeyboardButton('📕ᴬᴮᴼᵁᵀ📕', callback_data='about')
         ]
+        ]
     return InlineKeyboardMarkup(buttons)
 
 
