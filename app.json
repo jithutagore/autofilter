@@ -15,8 +15,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/EvamariaTG/EvaMaria",
-    "repository": "https://github.com/EvamariaTG/EvaMaria",
+    "website": "https://github.com/PachGit/charlie-chaplin",
+    "repository": "https://github.com/PachGit/charlie-chaplin",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
