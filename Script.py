@@ -8,11 +8,7 @@ class script(object):
 ✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
 ✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
 ✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱"""
-    SOURCE_TXT = """<b>Sorry Source Code Of This Bot is Private Add This Bot in Your Group And Use Like Yours😊
-    
-    
-    _𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐌𝐞 𝐅𝐨𝐫 𝐊𝐧𝐨𝐰 𝐀𝐛𝐨𝐮𝐭 𝐓𝐡𝐞 BOT 𝐈𝐧𝐟𝐨_
-━━━━━━━━━━━━᚜ <a href=https://t.me/EnthadaNokunne>𝔖𝔱𝔢𝔳𝔢</a> ᚛━━━━━━━━━━━━"""
+    SOURCE_TXT = """<b>Sorry Source Code Of This Bot is Private Add This Bot in Your Group And Use Like Yours😊"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and 𝘾𝙝𝙖𝙧𝙡𝙞𝙚 𝘾𝙝𝙖𝙥𝙡𝙞𝙣 will respond whenever a keyword is found the message
