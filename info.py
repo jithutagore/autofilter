@@ -11,49 +11,57 @@ def is_enabled(value, default):
         return default
 
 # Bot information
-SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+SESSION = 'Media_search'
+USER_SESSION = 'User_Bot'
+API_ID = 7349458
+API_HASH = "9c88f3ac51528cb11a96adb6f017fe77"
+BOT_TOKEN = "5050772080:AAHeP6_OxK5G4Y3_6O0CLPv-aHYeaDsblEU"
+USERBOT_STRING_SESSION = ''
 
 # Bot settings
-CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/5031d6222edf58a982e7d.jpg https://telegra.ph/file/834a8c9d9d36e99854f4c.jpg https://telegra.ph/file/ff0914df7348354f3201a.jpg https://telegra.ph/file/4ee47fbdf1ddd4039b528.jpg')).split()
+CACHE_TIME = 300
+USE_CAPTION_FILTER = False
+PICS = "https://telegra.ph/file/f77a436a94100b077317c.jpg"
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
-AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL')
-auth_grp = environ.get('AUTH_GROUP')
-AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
-AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
+ADMINS = 503170505
+CHANNELS = -1001492105169
+auth_users = 503170505
+AUTH_USERS = 503170505
+auth_channel = 1001777044851
+auth_grp = 1001393812865
+AUTH_CHANNEL = 10013938128651001777044851
+AUTH_GROUPS = 1001393812865
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Rajappan")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+DATABASE_URI = "mongodb+srv://t4filterbot1:t4filterbot1@cluster0.8ksja.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+DATABASE_NAME = "cluster0"
+COLLECTION_NAME = "Telegram_files"
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TeamEvamaria')
-P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
+LOG_CHANNEL = 1001508667215
+SUPPORT_CHAT = "T4FEED"
+P_TTI_SHOW_OFF = True
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
-SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
+SINGLE_BUTTON = True
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", None)
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Query: {query}</b> \n‌‌‌‌IMDb Data:\n\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10")
+IMDB_TEMPLATE="""<b>🏷 Title</b>: <a href={url}>{title}</a>
+🎭 Genres: {genres}
+📆 Year: <a href={url}/releaseinfo>{year}</a>
+🌟 Rating: <a href={url}/ratings>{rating}</a> / 10 (based on {votes} user ratings.)
+☀️ Languages : <code>{languages}</code>
+📀 RunTime: {runtime} Minutes
+📆 Release Info : {release_date}"""
+# IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Query: {query}</b> \n‌‌‌‌IMDb Data:\n\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
-SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
+SPELL_CHECK_REPLY = False
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
-
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
 LOG_STR += ("P_TTI_SHOW_OFF found , Users will be redirected to send /start to Bot PM instead of sending file file directly\n" if P_TTI_SHOW_OFF else "P_TTI_SHOW_OFF is disabled files will be send in PM, instead of sending start.\n")
